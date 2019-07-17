@@ -6,26 +6,26 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Todo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: TodoPage(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
+class TodoPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _TodoPageState createState() => _TodoPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TItle"),
+        title: Text("Todo"),
       ),
       body: Center(
         child: Column(
