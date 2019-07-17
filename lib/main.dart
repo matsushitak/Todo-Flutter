@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/todo.dart';
 
 void main() => runApp(App());
 
@@ -16,6 +17,14 @@ class App extends StatelessWidget {
 }
 
 class TodoPage extends StatefulWidget {
+  final todos = List<Todo>.generate(
+    20,
+    (i) => Todo(
+          'Todo $i',
+          'A description of what needs to be done for Todo $i',
+        ),
+  );
+
   @override
   _TodoPageState createState() => _TodoPageState();
 }
