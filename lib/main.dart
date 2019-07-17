@@ -36,15 +36,12 @@ class _TodoPageState extends State<TodoPage> {
       appBar: AppBar(
         title: Text("Todo"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: widget.todos.length,
+        itemBuilder: (context, index) {
+          var todo = widget.todos[index];
+          return ListTile(title: Text(todo.title));
+        },
       ),
     );
   }
